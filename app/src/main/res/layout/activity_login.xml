@@ -1,0 +1,209 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.juanp.yourtrip.Login">
+
+    <!-- Login progress -->
+
+
+    <ProgressBar
+        android:id="@+id/Progress_login"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/Img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        app:srcCompat="@mipmap/ic_logo" />
+
+    <TextView
+        android:id="@+id/Txt_bienvenida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mensaje_bienvenida"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textAppearance="@android:style/TextAppearance.WindowTitle"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/Txt_motivacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mensaje_motivacion"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <ScrollView
+        android:id="@+id/Form_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/Form_email_contraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/Layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/Txt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_correo"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/Layout_contraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/Txt_contraseña"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_contrasena"
+                    android:imeActionId="6"
+                    android:imeActionLabel="@string/action_ingresar_corto"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/Btn_ingresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:elevation="0dp"
+                android:text="@string/action_ingresar"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/Txt_olvido_contraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center"
+        android:gravity="left|center"
+        android:onClick="olvidoContrasena"
+        android:text="@string/olvido_contraseña"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/Txt_resgistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center"
+        android:onClick="registrarNuevoUsuario"
+        android:text="@string/nuevo_usuario"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/Txt_terminos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/terminos"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textColorLink="@color/colorPrimary"
+        android:textSize="10sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <GridLayout
+        android:id="@+id/Layout_redes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:id="@+id/Layout_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/Btn_Img_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                app:srcCompat="@mipmap/ic_facebook" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/Layout_instagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center">
+
+            <ImageButton
+                android:id="@+id/Btn_Img_instagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:foreground="@android:color/transparent"
+                app:srcCompat="@mipmap/ic_instagram" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/Layout_google"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/Btn_Img_google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:foreground="@android:color/transparent"
+                app:srcCompat="@mipmap/ic_google" />
+        </GridLayout>
+
+    </GridLayout>
+
+</LinearLayout>

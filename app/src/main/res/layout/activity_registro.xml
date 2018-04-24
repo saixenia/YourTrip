@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context="com.juanp.yourtrip.Registro">
+
+    <ImageView
+        android:id="@+id/Img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        app:srcCompat="@mipmap/ic_logo"
+        tools:layout_editor_absoluteX="296dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/Txt_titulo_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/registro"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <EditText
+        android:id="@+id/Txt_nombre"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <EditText
+        android:id="@+id/Txt_apellidos"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Apellidos"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <EditText
+        android:id="@+id/Txt_Email"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="298dp" />
+
+    <EditText
+        android:id="@+id/Txt_contraseña"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <ImageButton
+        android:id="@+id/Img_siguiente"
+        android:layout_width="68dp"
+        android:layout_height="58dp"
+        android:layout_gravity="right"
+        android:background="@android:color/transparent"
+        android:onClick="attemptLogin"
+        app:srcCompat="@mipmap/ic_launcher_flecha"
+        tools:layout_editor_absoluteX="287dp"
+        tools:layout_editor_absoluteY="437dp" />
+</LinearLayout>

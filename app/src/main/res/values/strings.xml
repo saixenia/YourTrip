@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Your Trip</string>
+    <string name="title_activity_login">Inicio de Sesion</string>
+    <string name="mensaje_bienvenida">Bienvenido a Your Trip</string>
+    <string name="mensaje_motivacion">Tus Viajes seran Inolvidables!</string>
+    <string name="olvido_contraseña">¿Olvidaste tu Contraseña?</string>
+    <string name="nuevo_usuario">Eres Nuevo, Registrate...</string>
+    <string name="terminos">Al registrarse, Aceptas nuestros Terminos y Politicas de Privacidad
+    </string>
+
+    <string name="titulo_olvido_contraseña">Recupera Tu Contraseña</string>
+    <string name="mensaje_olvido_contraseña">¿Cual es el correo con el que te Registraste?</string>
+
+    <string name="registro">Registro</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="email">Email</string>
+    <string name="contrasena">Contraseña</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_correo">Correo electronico</string>
+    <string name="prompt_contrasena">Contraseña</string>
+    <string name="action_ingresar">Ingresar</string>
+    <string name="action_ingresar_corto">Ingresar</string>
+    <string name="error_invalido_correo">Este correo electronico es invalido.</string>
+    <string name="error_invalido_contraseña">La contraseña es muy corta.</string>
+    <string name="error_incorrecta_contraseña">La contraseña es incorrecta.</string>
+    <string name="error_campo_requerido">Este campo es obligatorio.</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+</resources>
