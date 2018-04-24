@@ -1,4 +1,5 @@
 package com.juanp.yourtrip;
+//kjkljkdajsldjasld
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,10 +13,20 @@ public class Database extends SQLiteOpenHelper {
     public static final String COLUMN_LASTNAME = "lastname";
     public static final String COLUMN_ADDRESS = "address";
     public static final String COLUMN_EMAIL = "email";
+    public static final String COLUMN_EMAILss1 = "email";
+    public static final String COLUMN_EMAILss19 = "email";
+    public static final String COLUMN_EMAILss2 = "email";
+    public static final String COLUMN_EMAILss3 = "email";
+    public static final String COLUMN_EMAILss4 = "email";
+    public static final String COLUMN_EMAILss5 = "email";
+    public static final String COLUMN_EMAILss6 = "email";
+    public static final String COLUMN_EMAILss77= "email";
+    public static final String COLUMN_EMAILss8= "email";
+    public static final String COLUMN_EMAILss9= "email";
 
     private static final String DATABASE_NAME = "contacts.db";
     private static final int DATABASE_VERSION = 1;
-
+//puta
     // Database creation sql statement
     private static final String DATABASE_CREATE = "create table "
             + TABLE_CONTACTS+ "(" + COLUMN_ID
