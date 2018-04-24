@@ -1,4 +1,5 @@
 package com.juanp.yourtrip;
+//kjkljkdajsldjasld
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,6 +13,7 @@ public class Database extends SQLiteOpenHelper {
     public static final String COLUMN_LASTNAME = "lastname";
     public static final String COLUMN_ADDRESS = "address";
     public static final String COLUMN_EMAIL = "email";
+    public static final String COLUMN_EMAILss = "email";
 
     private static final String DATABASE_NAME = "contacts.db";
     private static final int DATABASE_VERSION = 1;
