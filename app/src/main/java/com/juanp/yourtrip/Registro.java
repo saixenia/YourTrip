@@ -7,6 +7,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 
+//poui
+
 public class Registro extends AppCompatActivity {
     private EditText txtnombre;
     private EditText txtapellidos;
