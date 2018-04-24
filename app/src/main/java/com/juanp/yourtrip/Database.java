@@ -15,7 +15,7 @@ public class Database extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "contacts.db";
     private static final int DATABASE_VERSION = 1;
-
+//puta
     // Database creation sql statement
     private static final String DATABASE_CREATE = "create table "
             + TABLE_CONTACTS+ "(" + COLUMN_ID
