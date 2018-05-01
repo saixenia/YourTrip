@@ -61,7 +61,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="461dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -72,7 +72,7 @@
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="427dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -92,6 +92,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/id_botones_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
