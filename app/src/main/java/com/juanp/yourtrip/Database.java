@@ -7,35 +7,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class Database extends SQLiteOpenHelper {
-    public static final String TABLE_CONTACTS = "usuarios";
-    public static final String COLUMN_ID = "id_usuario";
-    public static final String COLUMN_NAME = "nombre";
-    public static final String COLUMN_LASTNAME = "lastname";
-    public static final String COLUMN_ADDRESS = "address";
-    public static final String COLUMN_EMAIL = "email";
-    public static final String COLUMN_EMAILss1 = "email";
-    public static final String COLUMN_EMAILss19 = "email";
-    public static final String COLUMN_EMAILss2 = "email";
-    public static final String COLUMN_EMAILss3 = "email";
-    public static final String COLUMN_EMAILss4 = "email";
-    public static final String COLUMN_EMAILss5 = "email";
-    public static final String COLUMN_EMAILss6 = "email";
-    public static final String COLUMN_EMAILss77= "email";
-    public static final String COLUMN_EMAILss8= "email";
-    public static final String COLUMN_EMAILss9= "email";
-
-    private static final String DATABASE_NAME = "contacts.db";
+    private static final String TABLE_CONTACTS = "usuarios";
+    private static final String TABLE_VIAJES= "viajes";
+    private static final String TABLE_CATEGORIA_VIAJES= "categoria_viajes";
+    private static final String TABLE_SITIO_SUGERIDO= "sitio_sugerido";
+    private static final String TABLE_COMENTARIOS= "comentarios";
+    private static final String TABLE_CALIFICACION= "calificacion";
+    private static final String TABLE_IMAGENES= "imagenes";
+    private static final String DATABASE_NAME = "yourTrip.db";
     private static final int DATABASE_VERSION = 1;
-//puta
-    // Database creation sql statement
-    private static final String DATABASE_CREATE = "create table "
-            + TABLE_CONTACTS+ "(" + COLUMN_ID
-            + " integer primary key autoincrement, "
-            + COLUMN_NAME+ " text not null,"
-            + COLUMN_LASTNAME+ " text not null,"
-            + COLUMN_ADDRESS+ " text not null,"
-            + COLUMN_EMAIL+ " text not null"
-            + ");";
 
     public Database(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -44,10 +24,28 @@ public class Database extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase database) {
         database.execSQL("create table usuarios (id_usuario integer primary key autoincrement," +
-                "nom_us varchar(20),ape_us varchar(20),mail varchar(50),contrasena varchar(50)"+")"
+                "nom_us varchar(20),ape_us varchar(20),mail_us varchar(50),pas_us varchar(50)"+")"
         );
         database.execSQL("create table viajes (id_viaje  integer primary key autoincrement," +
                 "nom_viaje varchar(20),fecha_viaje datetime"+")"
+        );
+        database.execSQL("create table categoria_viajes (id_categoria_viaje   integer primary key autoincrement," +
+                "descripcion varchar(50)"+")"
+        );
+        database.execSQL("create table sitio_sugerido (id_sitio integer primary key autoincrement," +
+                "nom_sit_sugerido varchar(50),"+"lat_sit_sugerido numeric (20),lon_sit_sugerido numeric (20)"+")"
+        );
+        database.execSQL("create table comentarios (id_comentario integer primary key autoincrement," +
+                "des_comentario  varchar(50)"+")"
+        );
+        database.execSQL("create table calificacion (id_comentario integer primary key autoincrement," +
+                "des_comentario  varchar(50)"+")"
+        );
+        database.execSQL("create table calificacion (id_calificacion integer primary key autoincrement," +
+                "val_calificacion  varchar(50)"+")"
+        );
+        database.execSQL("create table imagenes (id_imagen integer primary key autoincrement," +
+                "ruta_imagen varchar(50)"+")"
         );
     }
 
@@ -57,6 +55,12 @@ public class Database extends SQLiteOpenHelper {
                 "Upgrading database from version " + oldVersion + " to "
                         + newVersion + ", which will destroy all old data");
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_CONTACTS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_VIAJES);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CATEGORIA_VIAJES);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_SITIO_SUGERIDO);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_COMENTARIOS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CALIFICACION);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_IMAGENES);
         onCreate(db);
     }
 }
