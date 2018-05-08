@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:padding="2dp"
     tools:context=".Actividad">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="2dp">
 
         <TextView
             android:id="@+id/textView2"
@@ -20,6 +22,7 @@
             android:layout_gravity="right"
             android:layout_weight="1"
             android:foregroundGravity="top|right"
+            android:padding="2dp"
             android:text="Siguiendo"
             android:textAllCaps="false"
             android:textColor="@android:color/black"
@@ -29,13 +32,15 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="2dp">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="2dp"
             android:text="Mis Viajes"
             android:textColor="@android:color/black"
             android:textSize="22sp"
@@ -45,9 +50,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="147dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="2dp">
 
 
         <SearchView
@@ -56,30 +62,35 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:contentDescription=" Filtrar por palabra clave o país"
+            android:padding="2dp"
             android:queryHint="Filtrar por palabra clave o país" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="461dp"
+        android:layout_height="447dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="2dp">
 
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:padding="2dp" />
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="427dp" />
+            android:layout_height="427dp"
+            android:padding="2dp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="369dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="2dp">
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/floatingActionButton"
@@ -88,7 +99,9 @@
             android:layout_gravity="bottom|end"
             android:layout_weight="1"
             android:clickable="true"
+            android:padding="0dp"
             app:srcCompat="@android:drawable/ic_input_add" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -96,7 +109,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="2dp">
 
         <ImageButton
             android:id="@+id/imageButton2"
@@ -104,6 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@android:color/transparent"
+            android:padding="2dp"
             app:srcCompat="@drawable/ic_image_black_40dp" />
 
         <ImageButton
@@ -112,6 +127,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@android:color/transparent"
+            android:padding="2dp"
             app:srcCompat="@drawable/ic_search_black_40dp" />
 
         <ImageButton
@@ -120,6 +136,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@android:color/transparent"
+            android:padding="2dp"
             app:srcCompat="@drawable/ic_message_black_40dp" />
 
         <ImageButton
@@ -128,6 +145,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@android:color/transparent"
+            android:padding="2dp"
             app:srcCompat="@drawable/ic_person_black_40dp" />
     </LinearLayout>
 

@@ -35,12 +35,12 @@
             android:textSize="22sp" />
     </LinearLayout>
 
-    <LinearLayout
+    <GridLayoutLayout
         android:layout_width="match_parent"
         android:layout_height="254dp"
         android:orientation="vertical">
 
-    </LinearLayout>
+    </GridLayoutLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,5 +62,21 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             app:srcCompat="@drawable/ic_local_airport_black_35dp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="ABC" />
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_image_black_40dp" />
     </LinearLayout>
 </LinearLayout>
