@@ -11,4 +11,3 @@ public class Viaje2 extends AppCompatActivity {
         setContentView(R.layout.activity_viaje2);
     }
 }
-///hjhjkkjkhjjkh

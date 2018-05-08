@@ -7,15 +7,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class Database extends SQLiteOpenHelper {
-    private static final String TABLE_CONTACTS = "usuarios";
-    private static final String TABLE_VIAJES= "viajes";
-    private static final String TABLE_CATEGORIA_VIAJES= "categoria_viajes";
-    private static final String TABLE_SITIO_SUGERIDO= "sitio_sugerido";
-    private static final String TABLE_COMENTARIOS= "comentarios";
-    private static final String TABLE_CALIFICACION= "calificacion";
-    private static final String TABLE_IMAGENES= "imagenes";
-    private static final String DATABASE_NAME = "yourTrip.db";
-    private static final int DATABASE_VERSION = 1;
+    public static final String TABLE_USUARIOS = "usuarios";
+    public static final String TABLE_VIAJES= "viajes";
+    public static final String TABLE_CATEGORIA_VIAJES= "categoria_viajes";
+    public static final String TABLE_SITIO_SUGERIDO= "sitio_sugerido";
+    public static final String TABLE_COMENTARIOS= "comentarios";
+    public static final String TABLE_CALIFICACION= "calificacion";
+    public static final String TABLE_IMAGENES= "imagenes";
+    public static final String DATABASE_NAME = "yourTrip.db";
+    public static final int DATABASE_VERSION = 1;
 
     public Database(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -23,9 +23,7 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-        database.execSQL("create table usuarios (id_usuario integer primary key autoincrement," +
-                "nom_us varchar(20),ape_us varchar(20),mail_us varchar(50),pas_us varchar(50)"+")"
-        );
+        database.execSQL("create table usuarios (id_usuario integer primary key autoincrement,nom_us varchar(20),ape_us varchar(20),mail_us varchar(50),pas_us varchar(50)"+")");
         database.execSQL("create table viajes (id_viaje  integer primary key autoincrement," +
                 "nom_viaje varchar(20),fecha_viaje datetime"+")"
         );
@@ -54,7 +52,7 @@ public class Database extends SQLiteOpenHelper {
         Log.w(Database.class.getName(),
                 "Upgrading database from version " + oldVersion + " to "
                         + newVersion + ", which will destroy all old data");
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CONTACTS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USUARIOS);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_VIAJES);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_CATEGORIA_VIAJES);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_SITIO_SUGERIDO);
