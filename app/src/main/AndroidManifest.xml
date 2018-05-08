@@ -26,7 +26,8 @@
             android:label="@string/title_activity_login" />
         <activity android:name=".OlvidoContrasena" />
         <activity android:name=".Registro" />
-        <activity android:name=".Viaje3"></activity>
+        <activity android:name=".Viaje3" />
+        <activity android:name=".Actividad2"></activity>
     </application>
 
 </manifest>

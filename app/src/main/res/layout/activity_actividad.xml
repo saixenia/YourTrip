@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="45dp"
         android:layout_weight="1"
         android:orientation="vertical"
         android:padding="2dp">
@@ -43,14 +43,14 @@
             android:padding="2dp"
             android:text="Mis Viajes"
             android:textColor="@android:color/black"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="147dp"
+        android:layout_height="60dp"
         android:layout_weight="1"
         android:orientation="vertical"
         android:padding="2dp">
@@ -58,7 +58,7 @@
 
         <SearchView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="75dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:contentDescription=" Filtrar por palabra clave o país"
@@ -68,7 +68,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="447dp"
+        android:layout_height="308dp"
         android:layout_weight="1"
         android:orientation="vertical"
         android:padding="2dp">
@@ -81,13 +81,13 @@
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="427dp"
+            android:layout_height="250dp"
             android:padding="2dp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="369dp"
+        android:layout_height="55dp"
         android:layout_weight="1"
         android:orientation="vertical"
         android:padding="2dp">
