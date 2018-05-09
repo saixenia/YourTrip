@@ -1,5 +1,5 @@
 package com.juanp.yourtrip;
-//kjkljkdajsldjasld
+
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
