@@ -23,28 +23,41 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-        database.execSQL("create table usuarios (id_usuario integer primary key autoincrement,nom_us varchar(20),ape_us varchar(20),mail_us varchar(50),pas_us varchar(50)"+")");
-        database.execSQL("create table viajes (id_viaje  integer primary key autoincrement," +
-                "nom_viaje varchar(20),fecha_viaje datetime"+")"
-        );
-        database.execSQL("create table categoria_viajes (id_categoria_viaje   integer primary key autoincrement," +
-                "descripcion varchar(50)"+")"
-        );
-        database.execSQL("create table sitio_sugerido (id_sitio integer primary key autoincrement," +
-                "nom_sit_sugerido varchar(50),"+"lat_sit_sugerido numeric (20),lon_sit_sugerido numeric (20)"+")"
-        );
-        database.execSQL("create table comentarios (id_comentario integer primary key autoincrement," +
-                "des_comentario  varchar(50)"+")"
-        );
-        database.execSQL("create table calificacion (id_comentario integer primary key autoincrement," +
-                "des_comentario  varchar(50)"+")"
-        );
-        database.execSQL("create table calificacion (id_calificacion integer primary key autoincrement," +
-                "val_calificacion  varchar(50)"+")"
-        );
-        database.execSQL("create table imagenes (id_imagen integer primary key autoincrement," +
-                "ruta_imagen varchar(50)"+")"
-        );
+        database.execSQL("create table usuarios (" +
+                "id_usuario integer primary key autoincrement," +
+                "usu_nombre varchar(20)," +
+                "usu_apellido varchar(20)," +
+                "usu_email varchar(50)," +
+                "usu_contrase varchar(50)"+")");
+
+        database.execSQL("create table viajes (" +
+                "id_viaje  integer primary key autoincrement," +
+                "nom_viaje varchar(20)," +
+                "fecha_viaje datetime"+")");
+
+        database.execSQL("create table categoria_viajes (" +
+                "id_categoria_viaje integer primary key autoincrement," +
+                "descripcion varchar(50)"+")");
+
+        database.execSQL("create table sitio_sugerido (" +
+                "id_sitio integer primary key autoincrement," +
+                "sit_sugerido_nom varchar(50)," +
+                "sit_sugerido_lati numeric (20)," +
+                "sit_sugerido_long numeric (20)"+")");
+
+        database.execSQL("create table comentarios (" +
+                "id_comentario integer primary key autoincrement," +
+                "id_viaje integer," +
+                "des_comentario varchar(50)"+")");
+
+        database.execSQL("create table calificacion (" +
+                "id_calificacion integer primary key autoincrement," +
+                "id_sitio integer," +
+                "val_calificacion varchar(50)"+")");
+
+        database.execSQL("create table imagenes (" +
+                "id_imagen integer primary key autoincrement," +
+                "ruta_imagen varchar(50)"+")");
     }
 
     @Override
