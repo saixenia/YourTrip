@@ -15,14 +15,6 @@
     <!-- Login progress -->
 
 
-    <ProgressBar
-        android:id="@+id/Progress_login"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
-
     <ImageView
         android:id="@+id/Img_logo"
         android:layout_width="wrap_content"
