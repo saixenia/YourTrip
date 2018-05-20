@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content">
 
                 <AutoCompleteTextView
-                    android:id="@+id/Txt_email"
+                    android:id="@+id/Txt_Email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_correo"
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/Txt_contraseña"
+                    android:id="@+id/Txt_Contrasena"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_contrasena"
@@ -93,7 +93,7 @@
             </android.support.design.widget.TextInputLayout>
 
             <Button
-                android:id="@+id/Btn_ingresar"
+                android:id="@+id/Btn_Ingresar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -107,7 +107,7 @@
     </ScrollView>
 
     <TextView
-        android:id="@+id/Txt_olvido_contraseña"
+        android:id="@+id/Txt_Olvido_Contrasena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right|center"
@@ -119,7 +119,7 @@
         tools:ignore="RtlCompat" />
 
     <TextView
-        android:id="@+id/Txt_resgistro"
+        android:id="@+id/Txt_Registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right|center"
