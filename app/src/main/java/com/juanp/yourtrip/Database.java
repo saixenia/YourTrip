@@ -24,7 +24,7 @@ public class Database extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase database) {
         database.execSQL("create table usuarios (" +
-                "id_usuario integer primary key autoincrement," +
+                "id_usuario integer primary key," +
                 "usu_nombre varchar(20)," +
                 "usu_apellido varchar(20)," +
                 "usu_email varchar(50)," +

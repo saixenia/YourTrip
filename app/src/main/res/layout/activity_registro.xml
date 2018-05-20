@@ -33,8 +33,16 @@
         tools:layout_editor_absoluteY="30dp" />
 
     <EditText
-        android:id="@+id/Txt_nombre"
-        android:layout_width="339dp"
+        android:id="@+id/Txt_Identificacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Identificacion"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Txt_Nombres"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Nombre"
@@ -43,8 +51,8 @@
         tools:layout_editor_absoluteY="120dp" />
 
     <EditText
-        android:id="@+id/Txt_apellidos"
-        android:layout_width="339dp"
+        android:id="@+id/Txt_Apellidos"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Apellidos"
@@ -54,7 +62,7 @@
 
     <EditText
         android:id="@+id/Txt_Email"
-        android:layout_width="339dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Email"
@@ -63,8 +71,8 @@
         tools:layout_editor_absoluteY="298dp" />
 
     <EditText
-        android:id="@+id/Txt_contraseña"
-        android:layout_width="339dp"
+        android:id="@+id/Txt_Contrasena"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Contraseña"
@@ -73,7 +81,7 @@
         tools:layout_editor_absoluteY="387dp" />
 
     <ImageButton
-        android:id="@+id/Img_siguiente"
+        android:id="@+id/Img_Siguiente"
         android:layout_width="68dp"
         android:layout_height="58dp"
         android:layout_gravity="right"
