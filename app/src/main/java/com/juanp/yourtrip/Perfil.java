@@ -7,31 +7,31 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class Perfil extends AppCompatActivity {
-    ImageButton imgBtn_Mis_viajes,imgBtn_Explorar,imgBtn_Notificacion,imgBtn_Contactos;
+    ImageButton ImgBtn_Mis_viajes, ImgBtn_Explorar, ImgBtn_Notificacion, ImgBtn_Contactos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
-        imgBtn_Mis_viajes=findViewById(R.id.imgBtn_Mis_viajes);
-        imgBtn_Explorar=findViewById(R.id.imgBtn_Explorar);
-        imgBtn_Notificacion=findViewById(R.id.imgBtn_Notificacion);
-        imgBtn_Contactos=findViewById(R.id.imgBtn_Contactos);
-        imgBtn_Contactos.setOnClickListener(new View.OnClickListener() {
+        ImgBtn_Mis_viajes=findViewById(R.id.ImgBtn_Mis_viajes);
+        ImgBtn_Explorar=findViewById(R.id.ImgBtn_Explorar);
+        ImgBtn_Notificacion=findViewById(R.id.ImgBtn_Notificacion);
+        ImgBtn_Contactos=findViewById(R.id.ImgBtn_Contactos);
+        ImgBtn_Contactos.setOnClickListener(new View.OnClickListener() {
             @Override
 
             public void onClick(View view) {
                 ir_perfil(view);
             }
         });
-        imgBtn_Mis_viajes.setOnClickListener(new View.OnClickListener() {
+        ImgBtn_Mis_viajes.setOnClickListener(new View.OnClickListener() {
             @Override
 
             public void onClick(View view) {
                 Mis_viajes(view);
             }
         });
-        imgBtn_Explorar.setOnClickListener(new View.OnClickListener() {
+        ImgBtn_Explorar.setOnClickListener(new View.OnClickListener() {
             @Override
 
             public void onClick(View view) {
