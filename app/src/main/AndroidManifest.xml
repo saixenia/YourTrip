@@ -28,6 +28,9 @@
         <activity android:name=".Registro" />
         <activity android:name=".Viaje3" />
         <activity android:name=".Actividad2" />
+        <activity android:name=".Actividad" />
+        <activity android:name=".Viaje" />
+        <activity android:name=".Viaje2" />
     </application>
 
 </manifest>

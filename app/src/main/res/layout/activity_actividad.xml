@@ -57,6 +57,7 @@
 
 
         <SearchView
+            android:id="@+id/Sv_pais"
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_gravity="center"
@@ -68,7 +69,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="308dp"
+        android:layout_height="277dp"
         android:layout_weight="1"
         android:orientation="vertical"
         android:padding="2dp">
@@ -80,6 +81,7 @@
             android:padding="2dp" />
 
         <ListView
+            android:id="@+id/lst_dynamic"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:padding="2dp" />
@@ -93,12 +95,13 @@
         android:padding="2dp">
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/ActBtn_adiciona"
+            android:layout_width="52dp"
+            android:layout_height="51dp"
             android:layout_gravity="bottom|end"
             android:layout_weight="1"
             android:clickable="true"
+            android:onClick="inicio_Opcion_Viaje"
             android:padding="0dp"
             app:srcCompat="@android:drawable/ic_input_add" />
 
@@ -113,7 +116,7 @@
         android:padding="2dp">
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/imgBtn_Mis_viajes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -122,7 +125,7 @@
             app:srcCompat="@drawable/ic_image_black_40dp" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/imgBtn_Explorar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -131,7 +134,7 @@
             app:srcCompat="@drawable/ic_search_black_40dp" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/imgBtn_Notificacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -140,7 +143,7 @@
             app:srcCompat="@drawable/ic_message_black_40dp" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/imgBtn_Contactos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -14,6 +14,8 @@ public class Database extends SQLiteOpenHelper {
     public static final String TABLE_COMENTARIOS= "comentarios";
     public static final String TABLE_CALIFICACION= "calificacion";
     public static final String TABLE_IMAGENES= "imagenes";
+    public static final String TABLE_PAISES= "paises";
+
     public static final String DATABASE_NAME = "yourTrip.db";
     public static final int DATABASE_VERSION = 1;
 
@@ -58,6 +60,16 @@ public class Database extends SQLiteOpenHelper {
         database.execSQL("create table imagenes (" +
                 "id_imagen integer primary key autoincrement," +
                 "ruta_imagen varchar(50)"+")");
+
+    /*    database.execSQL("create table paises (" +
+                "id_pais integer primary key autoincrement," +
+                "nom_pais varchar(50)"+")");
+        database.execSQL("insert into  paises (id_pais,nom_pais)values(1,Colombia)");
+        database.execSQL("insert into  paises (id_pais,nom_pais)values(2,Francia)");
+        database.execSQL("insert into  paises (id_pais,nom_pais)values(3,USA)");
+        database.execSQL("insert into  paises (id_pais,nom_pais)values(4,Mexico)");
+        database.execSQL("insert into  paises (id_pais,nom_pais)values(5,Peru)");
+        */
     }
 
     @Override

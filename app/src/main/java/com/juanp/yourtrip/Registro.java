@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-//poui
-
 public class Registro extends AppCompatActivity {
 
     EditText Txt_Identificacion, Txt_Nombres, Txt_Apellidos, Txt_Email, Txt_Contrasena;

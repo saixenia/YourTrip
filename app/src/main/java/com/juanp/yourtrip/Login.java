@@ -10,6 +10,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /*sharedpreferences para las sesiones
 * */
@@ -69,11 +70,16 @@ public class Login extends AppCompatActivity {
                 String Usu_Email = String.valueOf(Usuario.getString(0));
                 String Usu_Contra = Usuario.getString(1);
                 if (Email.equals(Usu_Email) && Contrasena.equals(Usu_Contra)){
-                    Intent Mesero = new Intent(Login.this,Actividad.class);
-                    startActivity(Mesero);
+
                     Txt_Email.setText("");
                     Txt_Contrasena.setText("");
+                    Intent Actividad = new Intent(Login.this,Actividad.class);
+                    startActivity(Actividad);
                 }
+            }else{
+                Txt_Email.setText("");
+                Txt_Contrasena.setText("");
+                Toast.makeText(getBaseContext(), "Credenciales invalidas",Toast.LENGTH_LONG).show();
             }
         }
 
@@ -86,5 +92,7 @@ public class Login extends AppCompatActivity {
         Intent Registrar = new Intent(this,Registro.class);
         startActivity(Registrar);
     }
+
+
 }
 
