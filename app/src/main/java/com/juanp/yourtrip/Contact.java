@@ -17,6 +17,9 @@ public class Contact {
     public String email;
     public String contra;
 
+    public Contact() {
+    }
+
     public Contact(int id) {
         this.id = id;
     }

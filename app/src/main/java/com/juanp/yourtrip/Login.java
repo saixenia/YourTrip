@@ -108,7 +108,10 @@ public class Login extends AppCompatActivity {
 
         Contact Usu = new Contact();
         Usu.getId();
-        Us.get
+        Usu.getNombre();
+        Usu.getApellido();
+        Usu.getEmail();
+        Usu.getContra()
 
         Usuario = DB_YourTrip.rawQuery("SELECT * FROM usuarios WHERE usu_email='"+Email+"' AND usu_contrase='"+Contrasena+"'", null);
 
