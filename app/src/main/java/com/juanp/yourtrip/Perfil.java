@@ -17,6 +17,7 @@ public class Perfil extends AppCompatActivity {
         ImgBtn_Explorar=findViewById(R.id.ImgBtn_Explorar);
         ImgBtn_Notificacion=findViewById(R.id.ImgBtn_Notificacion);
         ImgBtn_Contactos=findViewById(R.id.ImgBtn_Contactos);
+
         ImgBtn_Contactos.setOnClickListener(new View.OnClickListener() {
             @Override
 
@@ -24,6 +25,7 @@ public class Perfil extends AppCompatActivity {
                 ir_perfil(view);
             }
         });
+
         ImgBtn_Mis_viajes.setOnClickListener(new View.OnClickListener() {
             @Override
 
@@ -31,6 +33,7 @@ public class Perfil extends AppCompatActivity {
                 Mis_viajes(view);
             }
         });
+
         ImgBtn_Explorar.setOnClickListener(new View.OnClickListener() {
             @Override
 
