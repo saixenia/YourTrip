@@ -48,7 +48,7 @@
         android:padding="2dp">
 
         <ImageButton
-            android:id="@+id/imgBtn_Mis_viajes"
+            android:id="@+id/ImgBtn_Mis_viajes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -57,7 +57,7 @@
             app:srcCompat="@drawable/ic_image_black_40dp" />
 
         <ImageButton
-            android:id="@+id/imgBtn_Explorar"
+            android:id="@+id/ImgBtn_Explorar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -66,7 +66,7 @@
             app:srcCompat="@drawable/ic_search_black_40dp" />
 
         <ImageButton
-            android:id="@+id/imgBtn_Notificacion"
+            android:id="@+id/ImgBtn_Notificacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -75,7 +75,7 @@
             app:srcCompat="@drawable/ic_message_black_40dp" />
 
         <ImageButton
-            android:id="@+id/imgBtn_Contactos"
+            android:id="@+id/ImgBtn_Contactos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
