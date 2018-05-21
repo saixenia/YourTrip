@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/Btn_atras"
             android:layout_width="39dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -36,6 +36,7 @@
     </LinearLayout>
 
     <GridView
+        android:id="@+id/Gv_dynamic"
         android:layout_width="match_parent"
         android:layout_height="242dp" />
 
@@ -45,7 +46,7 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/imgBtn_Cam"
             android:layout_width="wrap_content"
             android:layout_height="62dp"
             android:layout_weight="1"
@@ -53,7 +54,7 @@
             app:srcCompat="@drawable/ic_local_see_black_35dp" />
 
         <ImageButton
-            android:id="@+id/imageButton7"
+            android:id="@+id/imgBtn_Avion"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -69,7 +70,7 @@
             android:hint="ABC" />
 
         <ImageButton
-            android:id="@+id/imageButton8"
+            android:id="@+id/imgBtn_Mis_viajes"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"

@@ -1,6 +1,8 @@
 package com.juanp.yourtrip;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +23,9 @@ public class Login extends AppCompatActivity {
     EditText Txt_Contrasena;
     Button Btn_Ingresar;
     TextView Txt_Olvido_Contrasena, Txt_Registro;
+    SharedPreferences sharedPreferences;
+    private final static String SETTING_USER = "setting_user";
+    private final static String SETTING_PASS = "setting_pass";
 
     public Cursor Usuario;
 
@@ -34,7 +39,7 @@ public class Login extends AppCompatActivity {
         Btn_Ingresar = findViewById(R.id.Btn_Ingresar);
         Txt_Olvido_Contrasena = findViewById(R.id.Txt_Olvido_Contrasena);
         Txt_Registro = findViewById(R.id.Txt_Registro);
-
+        sharedPreferences = getApplicationContext().getSharedPreferences("com.juanp.yourtrip", Context.MODE_PRIVATE);
         Btn_Ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +75,11 @@ public class Login extends AppCompatActivity {
                 String Usu_Email = String.valueOf(Usuario.getString(0));
                 String Usu_Contra = Usuario.getString(1);
                 if (Email.equals(Usu_Email) && Contrasena.equals(Usu_Contra)){
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString(SETTING_USER, Usu_Email);
+                    editor.putString(SETTING_PASS, Usu_Contra);
 
+                    editor.commit();
                     Txt_Email.setText("");
                     Txt_Contrasena.setText("");
                     Intent Actividad = new Intent(Login.this,Actividad.class);

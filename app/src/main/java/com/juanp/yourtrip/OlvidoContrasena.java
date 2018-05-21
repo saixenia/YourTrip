@@ -3,6 +3,7 @@ package com.juanp.yourtrip;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +15,7 @@ public class OlvidoContrasena extends AppCompatActivity {
 
     EditText Txt_Email;
     ImageButton Img_Siguiente;
-
+    private  final int duracionsplash=1500;
     public Cursor Usuario;
 
     @Override
@@ -46,9 +47,20 @@ public class OlvidoContrasena extends AppCompatActivity {
             String Usu_Email = String.valueOf(Usuario.getString(0));
             String Usu_Contra = Usuario.getString(1);
             if (Email.equals(Usu_Email)){
-                Toast.makeText(OlvidoContrasena.this,Usu_Contra, Toast.LENGTH_LONG).show();
+                Toast.makeText(OlvidoContrasena.this,Usu_Contra, Toast.LENGTH_SHORT).show();
                 Txt_Email.setText("");
+                new Handler().postDelayed(new Runnable() {
+
+                    public void run() {
+                        Intent intent = new Intent(OlvidoContrasena.this,Login.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                },duracionsplash);
             }
+        }else{
+            Toast.makeText(getBaseContext(),"Correo no registrado", Toast.LENGTH_LONG).show();
+            Txt_Email.setText("");
         }
 
     }

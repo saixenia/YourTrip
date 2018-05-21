@@ -1,17 +1,18 @@
 package com.juanp.yourtrip;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class Actividad2 extends AppCompatActivity {
+public class Perfil extends AppCompatActivity {
     ImageButton imgBtn_Mis_viajes,imgBtn_Explorar,imgBtn_Notificacion,imgBtn_Contactos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actividad2);
+        setContentView(R.layout.activity_perfil);
+
         imgBtn_Mis_viajes=findViewById(R.id.imgBtn_Mis_viajes);
         imgBtn_Explorar=findViewById(R.id.imgBtn_Explorar);
         imgBtn_Notificacion=findViewById(R.id.imgBtn_Notificacion);

@@ -23,16 +23,56 @@ public class Viaje extends AppCompatActivity {
         Btn_OViaje=findViewById(R.id.Btn_OViaje);
         textView3=findViewById(R.id.textView3);
         textView=findViewById(R.id.textView);
+
         Btn_Viaje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 inicioViaje(view);
             }
         });
-
+        Btn_escapada.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                inicioViaje(view);
+            }
+        });
+        Btn_Vcotidiana.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                inicioHistoriaViaje(view);
+            }
+        });
+        Btn_Familia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                inicioViaje(view);
+            }
+        });
+        Btn_Bebe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                inicioHistoriaViaje(view);
+            }
+        });
+        Btn_Mascota.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                inicioHistoriaViaje(view);
+            }
+        });
+        Btn_OViaje.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                inicioHistoriaViaje(view);
+            }
+        });
     }
     public void inicioViaje(View view){
         Intent Inicio_Viaje = new Intent(this,Viaje2.class);
         startActivity(Inicio_Viaje);
+    }
+    public void inicioHistoriaViaje(View view){
+        Intent Inicio_Historia_Viaje = new Intent(this,Viaje3.class);
+        startActivity(Inicio_Historia_Viaje);
     }
 }

@@ -6,6 +6,10 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -26,11 +30,13 @@
             android:label="@string/title_activity_login" />
         <activity android:name=".OlvidoContrasena" />
         <activity android:name=".Registro" />
-        <activity android:name=".Viaje3" />
-        <activity android:name=".Actividad2" />
         <activity android:name=".Actividad" />
+        <activity android:name=".Actividad2" />
         <activity android:name=".Viaje" />
         <activity android:name=".Viaje2" />
+        <activity android:name=".Viaje3" />
+        <activity android:name=".Perfil" />
+
     </application>
 
 </manifest>
