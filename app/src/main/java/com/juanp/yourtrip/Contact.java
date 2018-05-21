@@ -145,10 +145,10 @@ public class Contact {
     private Contact cursorToContact(Cursor cursor) {
         Contact c = new Contact(null);
         c.id = cursor.getInt(0);
-        c.name = cursor.getString(1);
-        c.lastname = cursor.getString(2);
+        c.nombre = cursor.getString(1);
+        c.apellido = cursor.getString(2);
         c.email = cursor.getString(3);
-        c.pass = cursor.getString(4);
+        c.contra = cursor.getString(4);
 
         return c;
     }
