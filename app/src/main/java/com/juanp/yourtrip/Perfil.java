@@ -1,17 +1,33 @@
 package com.juanp.yourtrip;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.*;
 
 public class Perfil extends AppCompatActivity {
+
+    EditText Txt_Nombres, Txt_Apellidos, Txt_Email, Txt_Contrasena;
+    Button Btn_Guardar;
     ImageButton ImgBtn_Mis_viajes, ImgBtn_Explorar, ImgBtn_Notificacion, ImgBtn_Contactos;
+
+    private Cursor Usuario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
+
+        Txt_Nombres = findViewById(R.id.Txt_Nombres);
+        Txt_Apellidos = findViewById(R.id.Txt_Apellidos);
+        Txt_Email = findViewById(R.id.Txt_Email);
+        Txt_Contrasena = findViewById(R.id.Txt_Contrasena);
 
         ImgBtn_Mis_viajes=findViewById(R.id.ImgBtn_Mis_viajes);
         ImgBtn_Explorar=findViewById(R.id.ImgBtn_Explorar);
@@ -56,5 +72,14 @@ public class Perfil extends AppCompatActivity {
         startActivity(Mis_viajes);
     }
 
+    private void cargarDatos(View view) {
+        Database Admin = new Database(this);
+        SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
 
+        String Usu_Nombre = Txt_Nombres.getText().toString();
+        String Usu_Apellido = Txt_Contrasena.getText().toString();
+        String Usu_Email = Txt_Email.get
+
+        Usuario = DB_YourTrip.rawQuery("SELECT usu_email,usu_contrase FROM usuarios WHERE usu_email='"+Email+"' AND usu_contrase='"+Contrasena+"'", null);
+    }
 }
