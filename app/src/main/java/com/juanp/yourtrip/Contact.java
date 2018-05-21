@@ -12,10 +12,10 @@ import java.util.List;
 
 public class Contact {
     public int id;
-    public String name;
-    public String lastname;
+    public String nombre;
+    public String apellido;
     public String email;
-    public String pass;
+    public String contra;
 
     public Contact(int id) {
         this.id = id;
@@ -26,20 +26,20 @@ public class Contact {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public String getEmail() {
@@ -50,12 +50,12 @@ public class Contact {
         this.email = email;
     }
 
-    public String getPass() {
-        return pass;
+    public String getContra() {
+        return contra;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setContra(String contra) {
+        this.contra = contra;
     }
 
 
@@ -66,7 +66,7 @@ public class Contact {
     // Will be used by the ArrayAdapter in the ListView
     @Override
     public String toString() {
-        return name + " "+lastname;
+        return nombre + " "+ apellido;
     }
     private SQLiteDatabase database;
     private Database dbHelper;
@@ -86,10 +86,10 @@ public class Contact {
     public Contact createContact(int id,String name, String lastname, String address, String email, String pass) {
         ContentValues values = new ContentValues();
         values.put("id_usuario",getId());
-        values.put("nom_us",getName());
-        values.put("ape_us", getLastname());
+        values.put("nom_us",getNombre());
+        values.put("ape_us", getApellido());
         values.put("mail_us", getEmail());
-        values.put("pas_us", getPass());
+        values.put("pas_us", getContra());
         long insertId = database.insert(Database.TABLE_USUARIOS, null,
                 values);        String[] campos = {"ID, MES, CONSUMO"};
         Cursor cursor = database.query(Database.TABLE_USUARIOS,campos, id + " = " + insertId, null,

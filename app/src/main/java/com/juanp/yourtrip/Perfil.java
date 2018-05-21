@@ -71,15 +71,4 @@ public class Perfil extends AppCompatActivity {
         Intent Mis_viajes = new Intent(this,Actividad.class);
         startActivity(Mis_viajes);
     }
-
-    private void cargarDatos(View view) {
-        Database Admin = new Database(this);
-        SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
-
-        String Usu_Nombre = Txt_Nombres.getText().toString();
-        String Usu_Apellido = Txt_Contrasena.getText().toString();
-        String Usu_Email = Txt_Email.get
-
-        Usuario = DB_YourTrip.rawQuery("SELECT usu_email,usu_contrase FROM usuarios WHERE usu_email='"+Email+"' AND usu_contrase='"+Contrasena+"'", null);
-    }
 }

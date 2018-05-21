@@ -24,8 +24,8 @@ public class Login extends AppCompatActivity {
     Button Btn_Ingresar;
     TextView Txt_Olvido_Contrasena, Txt_Registro;
     SharedPreferences sharedPreferences;
-    private final static String SETTING_USER = "setting_user";
-    private final static String SETTING_PASS = "setting_pass";
+    public final static String SETTING_USER = "setting_user";
+    public final static String SETTING_PASS = "setting_pass";
 
     public Cursor Usuario;
 
@@ -102,6 +102,23 @@ public class Login extends AppCompatActivity {
         startActivity(Registrar);
     }
 
+    private void cargarDatos(View view) {
+        Database Admin = new Database(this);
+        SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
+
+        Contact Usu = new Contact();
+        Usu.getId();
+        Us.get
+
+        Usuario = DB_YourTrip.rawQuery("SELECT * FROM usuarios WHERE usu_email='"+Email+"' AND usu_contrase='"+Contrasena+"'", null);
+
+        String Usu_Nombre = get;
+        String Usu_Apellido;
+        String Usu_Email;
+        String Usu_Contrasena;
+
+        Usuario = DB_YourTrip.rawQuery("SELECT * FROM usuarios WHERE usu_email='"+Email+"' AND usu_contrase='"+Contrasena+"'", null);
+    }
 
 }
 
