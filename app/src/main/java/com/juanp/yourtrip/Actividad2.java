@@ -12,10 +12,11 @@ public class Actividad2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actividad2);
-        ImgBtn_Mis_viajes=findViewById(R.id.ImgBtn_Mis_viajes);
-        ImgBtn_Explorar=findViewById(R.id.ImgBtn_Explorar);
-        ImgBtn_Notificacion=findViewById(R.id.ImgBtn_Notificacion);
-        ImgBtn_Contactos=findViewById(R.id.ImgBtn_Contactos);
+
+        ImgBtn_Mis_viajes = findViewById(R.id.ImgBtn_Mis_viajes);
+        ImgBtn_Explorar = findViewById(R.id.ImgBtn_Explorar);
+        ImgBtn_Notificacion = findViewById(R.id.ImgBtn_Notificacion);
+        ImgBtn_Contactos = findViewById(R.id.ImgBtn_Contactos);
 
         ImgBtn_Contactos.setOnClickListener(new View.OnClickListener() {
             @Override
