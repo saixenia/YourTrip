@@ -30,7 +30,7 @@ public class Login extends AppCompatActivity {
 
     public Cursor Usuario;
 
-    Perfil pf = new Perfil();
+    Perfil Pf = new Perfil();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,10 +119,10 @@ public class Login extends AppCompatActivity {
             String Usu_Email = String.valueOf(Usuario.getString(3));
             String Usu_Contrasena = String.valueOf(Usuario.getString(4));
 
-            pf.Txt_Nombres.setText(Usu_Nombre);
-            pf.Txt_Apellidos.setText(Usu_Apellido);
-            pf.Txt_Email.setText(Usu_Email);
-            pf.Txt_Contrasena.setText(Usu_Contrasena);
+            Pf.Txt_Nombres.setText(Usu_Nombre);
+            Pf.Txt_Apellidos.setText(Usu_Apellido);
+            Pf.Txt_Email.setText(Usu_Email);
+            Pf.Txt_Contrasena.setText(Usu_Contrasena);
 
         }
     }

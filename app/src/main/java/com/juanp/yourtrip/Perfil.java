@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.*;
+import com.juanp.yourtrip.Login;
 
 public class Perfil extends AppCompatActivity {
 
@@ -18,6 +18,8 @@ public class Perfil extends AppCompatActivity {
     ImageButton ImgBtn_Mis_viajes, ImgBtn_Explorar, ImgBtn_Notificacion, ImgBtn_Contactos;
 
     private Cursor Usuario;
+
+    Login Lg = new Login();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
