@@ -35,6 +35,8 @@ public class Perfil extends AppCompatActivity {
         ImgBtn_Notificacion=findViewById(R.id.ImgBtn_Notificacion);
         ImgBtn_Contactos=findViewById(R.id.ImgBtn_Contactos);
 
+        Lg.cargarDatos(view);
+
         ImgBtn_Contactos.setOnClickListener(new View.OnClickListener() {
             @Override
 
@@ -59,12 +61,7 @@ public class Perfil extends AppCompatActivity {
             }
         });
 
-        Btn_Guardar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Lg.cargarDatos(view);
-            }
-        });
+
     }
     private void ir_perfil(View view) {
         Intent sitios_Sugeridos = new Intent(this,Perfil.class);
