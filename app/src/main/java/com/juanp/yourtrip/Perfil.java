@@ -35,7 +35,7 @@ public class Perfil extends AppCompatActivity {
         ImgBtn_Notificacion=findViewById(R.id.ImgBtn_Notificacion);
         ImgBtn_Contactos=findViewById(R.id.ImgBtn_Contactos);
 
-        Lg.cargarDatos(view);
+        Lg.cargarDatos();
 
         ImgBtn_Contactos.setOnClickListener(new View.OnClickListener() {
             @Override

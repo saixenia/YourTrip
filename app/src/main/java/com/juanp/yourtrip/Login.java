@@ -104,7 +104,7 @@ public class Login extends AppCompatActivity {
         startActivity(Registrar);
     }
 
-    public void cargarDatos(View view) {
+    public void cargarDatos() {
         Database Admin = new Database(this);
         SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
 
