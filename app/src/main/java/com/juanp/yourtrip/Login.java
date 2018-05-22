@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.juanp.yourtrip.Perfil;
 
 /*sharedpreferences para las sesiones
 * */
@@ -28,6 +29,8 @@ public class Login extends AppCompatActivity {
     public final static String SETTING_PASS = "setting_pass";
 
     public Cursor Usuario;
+
+    Perfil pf = new Perfil();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,26 +105,26 @@ public class Login extends AppCompatActivity {
         startActivity(Registrar);
     }
 
-    private void cargarDatos(View view) {
+    public void cargarDatos(View view) {
         Database Admin = new Database(this);
         SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
 
-        Contact Usu = new Contact();
-        Usu.getId();
-        Usu.getNombre();
-        Usu.getApellido();
-        Usu.getEmail();
-        Usu.getContra()
+        String Email = Txt_Email.getText().toString();
 
-        Usuario = DB_YourTrip.rawQuery("SELECT * FROM usuarios WHERE usu_email='"+Email+"' AND usu_contrase='"+Contrasena+"'", null);
+        Usuario = DB_YourTrip.rawQuery("SELECT * FROM usuarios WHERE usu_email='" + Email + '"', null);
 
-        String Usu_Nombre = get;
-        String Usu_Apellido;
-        String Usu_Email;
-        String Usu_Contrasena;
+        if (Usuario.moveToFirst()) {
+            String Usu_Nombre = String.valueOf(Usuario.getString(1));
+            String Usu_Apellido = String.valueOf(Usuario.getString(2));
+            String Usu_Email = String.valueOf(Usuario.getString(3));
+            String Usu_Contrasena = String.valueOf(Usuario.getString(4));
 
-        Usuario = DB_YourTrip.rawQuery("SELECT * FROM usuarios WHERE usu_email='"+Email+"' AND usu_contrase='"+Contrasena+"'", null);
+            pf.Txt_Nombres.setText(Usu_Nombre);
+            pf.Txt_Apellidos.setText(Usu_Apellido);
+            pf.Txt_Email.setText(Usu_Email);
+            pf.Txt_Contrasena.setText(Usu_Contrasena);
+
+        }
     }
-
 }
 

@@ -71,4 +71,5 @@ public class Perfil extends AppCompatActivity {
         Intent Mis_viajes = new Intent(this,Actividad.class);
         startActivity(Mis_viajes);
     }
+
 }
