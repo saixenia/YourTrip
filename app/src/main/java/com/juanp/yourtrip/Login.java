@@ -29,8 +29,6 @@ public class Login extends AppCompatActivity {
 
     public Cursor Usuario;
 
-    Perfil Pf = new Perfil();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +39,9 @@ public class Login extends AppCompatActivity {
         Btn_Ingresar = findViewById(R.id.Btn_Ingresar);
         Txt_Olvido_Contrasena = findViewById(R.id.Txt_Olvido_Contrasena);
         Txt_Registro = findViewById(R.id.Txt_Registro);
+
         sharedPreferences = getApplicationContext().getSharedPreferences("com.juanp.yourtrip", Context.MODE_PRIVATE);
+
         Btn_Ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,27 +103,5 @@ public class Login extends AppCompatActivity {
         Intent Registrar = new Intent(this,Registro.class);
         startActivity(Registrar);
     }
-
-    /*public void cargarDatos() {
-        Database Admin = new Database(this);
-        SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
-
-        String Email = Txt_Email.getText().toString();
-
-        Usuario = DB_YourTrip.rawQuery("SELECT * FROM usuarios WHERE usu_email='" + Email + '"', null);
-
-        if (Usuario.moveToFirst()) {
-            String Usu_Nombre = String.valueOf(Usuario.getString(1));
-            String Usu_Apellido = String.valueOf(Usuario.getString(2));
-            String Usu_Email = String.valueOf(Usuario.getString(3));
-            String Usu_Contrasena = String.valueOf(Usuario.getString(4));
-
-            Pf.Txt_Nombres.setText(Usu_Nombre);
-            Pf.Txt_Apellidos.setText(Usu_Apellido);
-            Pf.Txt_Email.setText(Usu_Email);
-            Pf.Txt_Contrasena.setText(Usu_Contrasena);
-
-        }
-    }*/
 }
 

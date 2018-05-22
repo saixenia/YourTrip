@@ -5,10 +5,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Perfil extends AppCompatActivity {
 
@@ -17,8 +21,6 @@ public class Perfil extends AppCompatActivity {
     ImageButton ImgBtn_Mis_viajes, ImgBtn_Explorar, ImgBtn_Notificacion, ImgBtn_Contactos;
 
     private Cursor Usuario;
-
-    Login Lg = new Login();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +36,6 @@ public class Perfil extends AppCompatActivity {
         ImgBtn_Explorar=findViewById(R.id.ImgBtn_Explorar);
         ImgBtn_Notificacion=findViewById(R.id.ImgBtn_Notificacion);
         ImgBtn_Contactos=findViewById(R.id.ImgBtn_Contactos);
-
-        //Lg.cargarDatos();
 
         ImgBtn_Contactos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,5 +76,4 @@ public class Perfil extends AppCompatActivity {
         Intent Mis_viajes = new Intent(this,Actividad.class);
         startActivity(Mis_viajes);
     }
-
 }
