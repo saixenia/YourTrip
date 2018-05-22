@@ -104,7 +104,7 @@ public class Login extends AppCompatActivity {
         startActivity(Registrar);
     }
 
-    public void cargarDatos() {
+    /*public void cargarDatos() {
         Database Admin = new Database(this);
         SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
 
@@ -124,6 +124,6 @@ public class Login extends AppCompatActivity {
             Pf.Txt_Contrasena.setText(Usu_Contrasena);
 
         }
-    }
+    }*/
 }
 
