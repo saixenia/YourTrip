@@ -23,6 +23,8 @@ public class Perfil extends AppCompatActivity {
     Intent Email_Recibir = getIntent();
     String Email = Email_Recibir.getStringExtra("Email");
 
+    private Cursor Usuario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,5 +81,31 @@ public class Perfil extends AppCompatActivity {
         Intent Mis_viajes = new Intent(this,Actividad.class);
         Mis_viajes.putExtra("Email",Email);
         startActivity(Mis_viajes);
+    }
+
+    private void cargarPerfil (View view) {
+        Database Admin = new Database(this);
+        SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
+
+        Usuario = DB_YourTrip.rawQuery("SELECT * FROM usuarios WHERE usu_email='"+Email+"'", null);
+
+        if (Usuario.moveToFirst()) {
+
+            String Usu_nombre = Usuario.getString(1);
+            String Usu_apellido = Usuario.getString(2);
+            String Usu_Email = Usuario.getString(3);
+            String Usu_Contra = Usuario.getString(4);
+
+            Txt_Nombres.setText(Usu_nombre);
+            Txt_Apellidos.setText(Usu_apellido);
+            Txt_Email.setText(Usu_Email);
+            Txt_Contrasena.setText(Usu_Contra);
+        }
+
+        DB_YourTrip.close();
+    }
+
+    private void actualizar (View view) {
+
     }
 }

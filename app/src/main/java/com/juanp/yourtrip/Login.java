@@ -93,6 +93,7 @@ public class Login extends AppCompatActivity {
                 Txt_Contrasena.setText("");
                 Toast.makeText(getBaseContext(), "Credenciales invalidas",Toast.LENGTH_LONG).show();
             }
+            DB_YourTrip.close();
         }
 
         public void olvidoContrasena(View view){
