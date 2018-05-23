@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -30,6 +31,9 @@ public class Actividad extends AppCompatActivity {
     ImageButton imgBtn_Mis_viajes,imgBtn_Explorar,imgBtn_Notificacion,imgBtn_Contactos;
     FloatingActionButton ActBtn_adiciona;
     ListView lst_dynamic;
+
+    Intent Email_Recibir = getIntent();
+    String Email = Email_Recibir.getStringExtra("Email");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,31 +79,30 @@ public class Actividad extends AppCompatActivity {
                 ir_perfil(view);
             }
         });
-
-        Intent Email_Recibir = getIntent();
-        String Email = Email_Recibir.getStringExtra("Email");
-
-
     }
 
     private void ir_perfil(View view) {
-        Intent sitios_Sugeridos = new Intent(this,Perfil.class);
-        startActivity(sitios_Sugeridos);
+        Intent perfil = new Intent(this,Perfil.class);
+        perfil.putExtra("Email", Email);
+        startActivity(perfil);
     }
 
     private void sitios_Sugeridos(View view) {
         Intent sitios_Sugeridos = new Intent(this,Actividad2.class);
+        sitios_Sugeridos.putExtra("Email",Email);
         startActivity(sitios_Sugeridos);
     }
 
     private void Mis_viajes(View view) {
         Intent Mis_viajes = new Intent(this,Actividad.class);
+        Mis_viajes.putExtra("Email",Email);
         startActivity(Mis_viajes);
     }
 
 
     public void inicio_Opcion_Viaje(View view){
         Intent Inicio_Opcion_Viaje = new Intent(this,Viaje.class);
+        Inicio_Opcion_Viaje.putExtra("Email",Email);
         startActivity(Inicio_Opcion_Viaje);
     }
 
