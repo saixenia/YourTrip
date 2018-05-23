@@ -85,6 +85,7 @@ public class Login extends AppCompatActivity {
                     Txt_Email.setText("");
                     Txt_Contrasena.setText("");
                     Intent Actividad = new Intent(Login.this,Actividad.class);
+                    Actividad.putExtra("Email", Txt_Email.getText().toString());
                     startActivity(Actividad);
                 }
             }else{
