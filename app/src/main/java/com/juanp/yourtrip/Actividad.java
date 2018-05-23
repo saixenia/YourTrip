@@ -29,7 +29,7 @@ public class Actividad extends AppCompatActivity {
     Spinner   spinner;
     ImageButton imgBtn_Mis_viajes,imgBtn_Explorar,imgBtn_Notificacion,imgBtn_Contactos;
     FloatingActionButton ActBtn_adiciona;
-ListView lst_dynamic;
+    ListView lst_dynamic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +75,9 @@ ListView lst_dynamic;
                 ir_perfil(view);
             }
         });
+
+        Intent Email_Recibir = getIntent();
+        String Email = Email_Recibir.getStringExtra("Email");
 
 
     }
