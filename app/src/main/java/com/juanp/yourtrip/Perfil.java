@@ -40,6 +40,8 @@ public class Perfil extends AppCompatActivity {
         ImgBtn_Notificacion=findViewById(R.id.ImgBtn_Notificacion);
         ImgBtn_Contactos=findViewById(R.id.ImgBtn_Contactos);
 
+        this.cargarPerfil();
+
         ImgBtn_Contactos.setOnClickListener(new View.OnClickListener() {
             @Override
 
@@ -65,6 +67,7 @@ public class Perfil extends AppCompatActivity {
         });
 
 
+
     }
     private void ir_perfil(View view) {
         Intent Perfil = new Intent(this,Perfil.class);
@@ -83,7 +86,7 @@ public class Perfil extends AppCompatActivity {
         startActivity(Mis_viajes);
     }
 
-    private void cargarPerfil (View view) {
+    private void cargarPerfil () {
         Database Admin = new Database(this);
         SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
 
