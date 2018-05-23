@@ -4,9 +4,11 @@ package com.juanp.yourtrip;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.provider.BaseColumns;
 import android.util.Log;
 
 public class Database extends SQLiteOpenHelper {
+
     public static final String TABLE_USUARIOS = "usuarios";
     public static final String TABLE_VIAJES= "viajes";
     public static final String TABLE_CATEGORIA_VIAJES= "categoria_viajes";
@@ -18,6 +20,14 @@ public class Database extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "yourTrip.db";
     public static final int DATABASE_VERSION = 1;
+
+    public static abstract class Usuarios implements BaseColumns {
+        public static final String TABLE_NAME = "usuarios";
+        public static final String COLUMN_NOMBRE = "usu_nombre";
+        public static final String COLUMN_APELLIDO = "usu_apellido";
+        public static final String COLUMN_EMAIL = "usu_email";
+        public static final String COLUMN_CONTRASENA = "usu_contrase";
+    }
 
     public Database(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

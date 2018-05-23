@@ -1,5 +1,6 @@
 package com.juanp.yourtrip;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -35,11 +36,14 @@ public class Perfil extends AppCompatActivity {
         Txt_Email = findViewById(R.id.Txt_Email);
         Txt_Contrasena = findViewById(R.id.Txt_Contrasena);
 
+        Btn_Guardar = findViewById(R.id.Btn_Guardar);
+
         ImgBtn_Mis_viajes=findViewById(R.id.ImgBtn_Mis_viajes);
         ImgBtn_Explorar=findViewById(R.id.ImgBtn_Explorar);
         ImgBtn_Notificacion=findViewById(R.id.ImgBtn_Notificacion);
         ImgBtn_Contactos=findViewById(R.id.ImgBtn_Contactos);
 
+        Txt_Email.setEnabled(Boolean.FALSE);
         this.cargarPerfil();
 
         ImgBtn_Contactos.setOnClickListener(new View.OnClickListener() {
@@ -66,7 +70,14 @@ public class Perfil extends AppCompatActivity {
             }
         });
 
-        Txt_Email.setEnabled(Boolean.FALSE);
+        Btn_Guardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                actualizar(view);
+            }
+        });
+
+
 
     }
     private void ir_perfil(View view) {
@@ -109,6 +120,19 @@ public class Perfil extends AppCompatActivity {
     }
 
     private void actualizar (View view) {
+        Database Admin = new Database(this);
+        SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
 
+        ContentValues Datos = new ContentValues();
+
+        Datos.put(Database.Usuarios.COLUMN_NOMBRE,Txt_Nombres.getText().toString());
+        Datos.put(Database.Usuarios.COLUMN_APELLIDO,Txt_Apellidos.getText().toString());
+        Datos.put(Database.Usuarios.COLUMN_CONTRASENA, Txt_Email.getText().toString());
+
+        String Registro = Database.Usuarios.COLUMN_EMAIL + " LIKE " + Email;
+
+        int Count = DB_YourTrip.update("usuarios", Datos, Registro, null);
+
+        DB_YourTrip.close();
     }
 }
