@@ -66,7 +66,7 @@ public class Perfil extends AppCompatActivity {
             }
         });
 
-
+        Txt_Email.setEnabled(Boolean.FALSE);
 
     }
     private void ir_perfil(View view) {
