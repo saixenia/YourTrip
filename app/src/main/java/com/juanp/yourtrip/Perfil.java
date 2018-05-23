@@ -20,7 +20,8 @@ public class Perfil extends AppCompatActivity {
     Button Btn_Guardar;
     ImageButton ImgBtn_Mis_viajes, ImgBtn_Explorar, ImgBtn_Notificacion, ImgBtn_Contactos;
 
-    private Cursor Usuario;
+    Intent Email_Recibir = getIntent();
+    String Email = Email_Recibir.getStringExtra("Email");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,16 +65,19 @@ public class Perfil extends AppCompatActivity {
 
     }
     private void ir_perfil(View view) {
-        Intent sitios_Sugeridos = new Intent(this,Perfil.class);
-        startActivity(sitios_Sugeridos);
+        Intent Perfil = new Intent(this,Perfil.class);
+        Perfil.putExtra("Email", Email);
+        startActivity(Perfil);
     }
     private void sitios_Sugeridos(View view) {
         Intent sitios_Sugeridos = new Intent(this,Actividad2.class);
+        sitios_Sugeridos.putExtra("Email",Email);
         startActivity(sitios_Sugeridos);
     }
 
     private void Mis_viajes(View view) {
         Intent Mis_viajes = new Intent(this,Actividad.class);
+        Mis_viajes.putExtra("Email",Email);
         startActivity(Mis_viajes);
     }
 }
