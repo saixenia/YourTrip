@@ -28,7 +28,7 @@
             app:srcCompat="@drawable/profile" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/Titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Titulo Viaje"

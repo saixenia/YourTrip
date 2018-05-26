@@ -18,7 +18,7 @@ public class Viaje3 extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     ImageView imageView;
     Button Btn_atras;
-    TextView textView6;
+    TextView Titulo;
     GridView Gv_dynamic;
     ImageButton imgBtn_Cam,imgBtn_Avion,imgBtn_Mis_viajes;
     EditText editText;
@@ -30,7 +30,7 @@ public class Viaje3 extends AppCompatActivity {
         imgBtn_Mis_viajes=findViewById(R.id.imgBtn_Mis_viajes);
         Btn_atras=findViewById(R.id.Btn_atras);
         imageView=findViewById(R.id.imageView);
-        textView6=findViewById(R.id.textView6);
+        Titulo=findViewById(R.id.textView6);
         Gv_dynamic=findViewById(R.id.Gv_dynamic);
         imgBtn_Cam=findViewById(R.id.imgBtn_Cam);
         imgBtn_Avion=findViewById(R.id.imgBtn_Avion);
@@ -42,6 +42,14 @@ public class Viaje3 extends AppCompatActivity {
 
             public void onClick(View view) {
                 Mis_viajes(view);
+            }
+        });
+
+        Titulo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String titulo = editText.getText().toString();
+                Titulo.setText(titulo);
             }
         });
       /*  imgBtn_Cam.setOnClickListener(new View.OnClickListener() {
