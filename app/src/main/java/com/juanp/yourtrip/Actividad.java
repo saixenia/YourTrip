@@ -89,20 +89,20 @@ public class Actividad extends AppCompatActivity {
 
     private void sitios_Sugeridos(View view) {
         Intent sitios_Sugeridos = new Intent(this,Actividad2.class);
-        sitios_Sugeridos.putExtra("Email",Email_Actividad);
+        //sitios_Sugeridos.putExtra("Email",Email_Actividad);
         startActivity(sitios_Sugeridos);
     }
 
     private void Mis_viajes(View view) {
         Intent Mis_viajes = new Intent(this,Actividad.class);
-        Mis_viajes.putExtra("Email",Email_Actividad);
+        //Mis_viajes.putExtra("Email",Email_Actividad);
         startActivity(Mis_viajes);
     }
 
 
     public void inicio_Opcion_Viaje(View view){
         Intent Inicio_Opcion_Viaje = new Intent(this,Viaje.class);
-        Inicio_Opcion_Viaje.putExtra("Email",Email_Actividad);
+        //Inicio_Opcion_Viaje.putExtra("Email",Email_Actividad);
         startActivity(Inicio_Opcion_Viaje);
     }
 
