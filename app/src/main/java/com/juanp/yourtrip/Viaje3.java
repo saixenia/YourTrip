@@ -50,6 +50,7 @@ public class Viaje3 extends AppCompatActivity {
             public void onClick(View view) {
                 String titulo = editText.getText().toString();
                 Titulo.setText(titulo);
+                Titulo.setEnabled(false);
             }
         });
       /*  imgBtn_Cam.setOnClickListener(new View.OnClickListener() {
