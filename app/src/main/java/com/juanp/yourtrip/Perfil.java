@@ -86,13 +86,13 @@ public class Perfil extends AppCompatActivity {
     }
     private void sitios_Sugeridos(View view) {
         Intent sitios_Sugeridos = new Intent(this,Actividad2.class);
-        sitios_Sugeridos.putExtra("Email",Email_Perfil);
+        //sitios_Sugeridos.putExtra("Email",Email_Perfil);
         startActivity(sitios_Sugeridos);
     }
 
     private void Mis_viajes(View view) {
         Intent Mis_viajes = new Intent(this,Actividad.class);
-        Mis_viajes.putExtra("Email",Email_Perfil);
+        //Mis_viajes.putExtra("Email",Email_Perfil);
         startActivity(Mis_viajes);
     }
 
