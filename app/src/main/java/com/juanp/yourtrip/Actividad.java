@@ -32,8 +32,8 @@ public class Actividad extends AppCompatActivity {
     FloatingActionButton ActBtn_adiciona;
     ListView lst_dynamic;
 
-    Intent Email_Recibir = getIntent();
-    String Email_Actividad = Email_Recibir.getStringExtra("Email");
+    //Intent Email_Recibir = getIntent();
+    //String Email_Actividad = Email_Recibir.getStringExtra("Email");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +83,7 @@ public class Actividad extends AppCompatActivity {
 
     private void ir_perfil(View view) {
         Intent perfil = new Intent(this,Perfil.class);
-        perfil.putExtra("Email", Email_Actividad);
+        //perfil.putExtra("Email", Email_Actividad);
         startActivity(perfil);
     }
 
