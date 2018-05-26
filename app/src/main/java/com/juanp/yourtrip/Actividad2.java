@@ -9,8 +9,8 @@ import android.widget.ImageButton;
 public class Actividad2 extends AppCompatActivity {
     ImageButton ImgBtn_Mis_viajes, ImgBtn_Explorar, ImgBtn_Notificacion, ImgBtn_Contactos;
 
-    Intent Email_Recibir = getIntent();
-    String Email_Actividad2 = Email_Recibir.getStringExtra("Email");
+    //Intent Email_Recibir = getIntent();
+    //String Email_Actividad2 = Email_Recibir.getStringExtra("Email");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,18 +48,18 @@ public class Actividad2 extends AppCompatActivity {
     }
     private void ir_perfil(View view) {
         Intent perfil = new Intent(this,Perfil.class);
-        perfil.putExtra("Email", Email_Actividad2);
+        //perfil.putExtra("Email", Email_Actividad2);
         startActivity(perfil);
     }
     private void sitios_Sugeridos(View view) {
         Intent sitios_Sugeridos = new Intent(this,Actividad2.class);
-        sitios_Sugeridos.putExtra("Email",Email_Actividad2);
+        //sitios_Sugeridos.putExtra("Email",Email_Actividad2);
         startActivity(sitios_Sugeridos);
     }
 
     private void Mis_viajes(View view) {
         Intent Mis_viajes = new Intent(this,Actividad.class);
-        Mis_viajes.putExtra("Email",Email_Actividad2);
+        //Mis_viajes.putExtra("Email",Email_Actividad2);
         startActivity(Mis_viajes);
     }
 }
