@@ -22,7 +22,7 @@ public class Perfil extends AppCompatActivity {
     ImageButton ImgBtn_Mis_viajes, ImgBtn_Explorar, ImgBtn_Notificacion, ImgBtn_Contactos;
 
     Intent Email_Recibir = getIntent();
-    String Email = Email_Recibir.getStringExtra("Email");
+    String Email_Perfil = Email_Recibir.getStringExtra("Email");
 
     private Cursor Usuario;
 
@@ -81,18 +81,18 @@ public class Perfil extends AppCompatActivity {
     }
     private void ir_perfil(View view) {
         Intent Perfil = new Intent(this,Perfil.class);
-        Perfil.putExtra("Email", Email);
+        Perfil.putExtra("Email", Email_Perfil);
         startActivity(Perfil);
     }
     private void sitios_Sugeridos(View view) {
         Intent sitios_Sugeridos = new Intent(this,Actividad2.class);
-        sitios_Sugeridos.putExtra("Email",Email);
+        sitios_Sugeridos.putExtra("Email",Email_Perfil);
         startActivity(sitios_Sugeridos);
     }
 
     private void Mis_viajes(View view) {
         Intent Mis_viajes = new Intent(this,Actividad.class);
-        Mis_viajes.putExtra("Email",Email);
+        Mis_viajes.putExtra("Email",Email_Perfil);
         startActivity(Mis_viajes);
     }
 
@@ -100,7 +100,7 @@ public class Perfil extends AppCompatActivity {
         Database Admin = new Database(this);
         SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
 
-        Usuario = DB_YourTrip.rawQuery("SELECT * FROM usuarios WHERE usu_email='"+Email+"'", null);
+        Usuario = DB_YourTrip.rawQuery("SELECT * FROM usuarios WHERE usu_email='"+Email_Perfil+"'", null);
 
         if (Usuario.moveToFirst()) {
 
@@ -128,7 +128,7 @@ public class Perfil extends AppCompatActivity {
         Datos.put(Database.Usuarios.COLUMN_APELLIDO,Txt_Apellidos.getText().toString());
         Datos.put(Database.Usuarios.COLUMN_CONTRASENA, Txt_Email.getText().toString());
 
-        String Registro = Database.Usuarios.COLUMN_EMAIL + " LIKE " + Email;
+        String Registro = Database.Usuarios.COLUMN_EMAIL + " LIKE " + Email_Perfil;
 
         int Count = DB_YourTrip.update("usuarios", Datos, Registro, null);
 
