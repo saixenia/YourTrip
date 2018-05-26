@@ -21,6 +21,11 @@ public class Perfil extends AppCompatActivity {
     Button Btn_Guardar;
     ImageButton ImgBtn_Mis_viajes, ImgBtn_Explorar, ImgBtn_Notificacion, ImgBtn_Contactos;
 
+    Intent Email_Recibir = getIntent();
+    String Email = Email_Recibir.getStringExtra("Email");
+
+    private Cursor Usuario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +42,9 @@ public class Perfil extends AppCompatActivity {
         ImgBtn_Explorar=findViewById(R.id.ImgBtn_Explorar);
         ImgBtn_Notificacion=findViewById(R.id.ImgBtn_Notificacion);
         ImgBtn_Contactos=findViewById(R.id.ImgBtn_Contactos);
+
+        Txt_Email.setEnabled(Boolean.FALSE);
+        this.cargarPerfil();
 
         ImgBtn_Contactos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,19 +70,68 @@ public class Perfil extends AppCompatActivity {
             }
         });
 
+        Btn_Guardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                actualizar(view);
+            }
+        });
+
 
     }
     private void ir_perfil(View view) {
         Intent Perfil = new Intent(this,Perfil.class);
+        Perfil.putExtra("Email", Email);
         startActivity(Perfil);
     }
     private void sitios_Sugeridos(View view) {
         Intent sitios_Sugeridos = new Intent(this,Actividad2.class);
+        sitios_Sugeridos.putExtra("Email",Email);
         startActivity(sitios_Sugeridos);
     }
 
     private void Mis_viajes(View view) {
         Intent Mis_viajes = new Intent(this,Actividad.class);
+        Mis_viajes.putExtra("Email",Email);
         startActivity(Mis_viajes);
+    }
+
+    private void cargarPerfil () {
+        Database Admin = new Database(this);
+        SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
+
+        Usuario = DB_YourTrip.rawQuery("SELECT * FROM usuarios WHERE usu_email='"+Email+"'", null);
+
+        if (Usuario.moveToFirst()) {
+
+            String Usu_nombre = Usuario.getString(1);
+            String Usu_apellido = Usuario.getString(2);
+            String Usu_Email = Usuario.getString(3);
+            String Usu_Contra = Usuario.getString(4);
+
+            Txt_Nombres.setText(Usu_nombre);
+            Txt_Apellidos.setText(Usu_apellido);
+            Txt_Email.setText(Usu_Email);
+            Txt_Contrasena.setText(Usu_Contra);
+        }
+
+        DB_YourTrip.close();
+    }
+
+    private void actualizar (View view) {
+        Database Admin = new Database(this);
+        SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
+
+        ContentValues Datos = new ContentValues();
+
+        Datos.put(Database.Usuarios.COLUMN_NOMBRE,Txt_Nombres.getText().toString());
+        Datos.put(Database.Usuarios.COLUMN_APELLIDO,Txt_Apellidos.getText().toString());
+        Datos.put(Database.Usuarios.COLUMN_CONTRASENA, Txt_Email.getText().toString());
+
+        String Registro = Database.Usuarios.COLUMN_EMAIL + " LIKE " + Email;
+
+        int Count = DB_YourTrip.update("usuarios", Datos, Registro, null);
+
+        DB_YourTrip.close();
     }
 }
