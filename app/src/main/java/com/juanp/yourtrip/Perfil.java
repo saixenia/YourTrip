@@ -70,12 +70,12 @@ public class Perfil extends AppCompatActivity {
             }
         });
 
-        Btn_Guardar.setOnClickListener(new View.OnClickListener() {
+        /*Btn_Guardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 actualizar(view);
             }
-        });
+        });*/
 
 
     }
@@ -118,7 +118,7 @@ public class Perfil extends AppCompatActivity {
         DB_YourTrip.close();
     }
 
-    private void actualizar (View view) {
+    /*private void actualizar (View view) {
         Database Admin = new Database(this);
         SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
 
@@ -133,5 +133,5 @@ public class Perfil extends AppCompatActivity {
         int Count = DB_YourTrip.update("usuarios", Datos, Registro, null);
 
         DB_YourTrip.close();
-    }
+    }*/
 }
