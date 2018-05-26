@@ -21,8 +21,8 @@ public class Perfil extends AppCompatActivity {
     Button Btn_Guardar;
     ImageButton ImgBtn_Mis_viajes, ImgBtn_Explorar, ImgBtn_Notificacion, ImgBtn_Contactos;
 
-    Intent Email_Recibir = getIntent();
-    String Email_Perfil = Email_Recibir.getStringExtra("Email");
+    //Intent Email_Recibir = getIntent();
+    //String Email_Perfil = Email_Recibir.getStringExtra("Email");
 
     private Cursor Usuario;
 
@@ -43,8 +43,8 @@ public class Perfil extends AppCompatActivity {
         ImgBtn_Notificacion=findViewById(R.id.ImgBtn_Notificacion);
         ImgBtn_Contactos=findViewById(R.id.ImgBtn_Contactos);
 
-        Txt_Email.setEnabled(Boolean.FALSE);
-        this.cargarPerfil();
+        //Txt_Email.setEnabled(Boolean.FALSE);
+        //this.cargarPerfil();
 
         ImgBtn_Contactos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +96,7 @@ public class Perfil extends AppCompatActivity {
         startActivity(Mis_viajes);
     }
 
-    private void cargarPerfil () {
+    /*private void cargarPerfil () {
         Database Admin = new Database(this);
         SQLiteDatabase DB_YourTrip = Admin.getWritableDatabase();
 
@@ -116,7 +116,7 @@ public class Perfil extends AppCompatActivity {
         }
 
         DB_YourTrip.close();
-    }
+    }*/
 
     /*private void actualizar (View view) {
         Database Admin = new Database(this);
