@@ -32,8 +32,8 @@ public class Actividad extends AppCompatActivity {
     FloatingActionButton ActBtn_adiciona;
     ListView lst_dynamic;
 
-    //Intent Email_Recibir = getIntent();
-    //String Email_Actividad = Email_Recibir.getStringExtra("Email");
+    Intent Email_Recibir = getIntent();
+    String Email_Actividad = Email_Recibir.getStringExtra("Email");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
