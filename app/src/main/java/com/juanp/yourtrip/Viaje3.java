@@ -50,7 +50,7 @@ public class Viaje3 extends AppCompatActivity {
             public void onClick(View view) {
                 String titulo = editText.getText().toString();
                 Titulo.setText(titulo);
-                Titulo.setTextColor(R.color.black);
+                Titulo.setTextColor(R.color.Negro);
                 Titulo.setEnabled(false);
             }
         });
