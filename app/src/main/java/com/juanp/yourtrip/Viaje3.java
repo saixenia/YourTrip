@@ -2,6 +2,7 @@ package com.juanp.yourtrip;
 
 import android.Manifest;
 import android.content.Intent;
+import android.graphics.Color;
 import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -50,7 +51,7 @@ public class Viaje3 extends AppCompatActivity {
             public void onClick(View view) {
                 String titulo = editText.getText().toString();
                 Titulo.setText(titulo);
-                Titulo.setTextColor(R.color.Negro);
+                Titulo.setTextColor(Color.rgb(0,0,0));
                 Titulo.setEnabled(false);
             }
         });
