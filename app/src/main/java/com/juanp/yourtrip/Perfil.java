@@ -81,7 +81,7 @@ public class Perfil extends AppCompatActivity {
     }
     private void ir_perfil(View view) {
         Intent Perfil = new Intent(this,Perfil.class);
-        Perfil.putExtra("Email", Email_Perfil);
+        //Perfil.putExtra("Email", Email_Perfil);
         startActivity(Perfil);
     }
     private void sitios_Sugeridos(View view) {
