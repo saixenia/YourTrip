@@ -30,7 +30,7 @@ public class Viaje3 extends AppCompatActivity {
         imgBtn_Mis_viajes=findViewById(R.id.imgBtn_Mis_viajes);
         Btn_atras=findViewById(R.id.Btn_atras);
         imageView=findViewById(R.id.imageView);
-        Titulo=findViewById(R.id.textView6);
+        Titulo=findViewById(R.id.Titulo);
         Gv_dynamic=findViewById(R.id.Gv_dynamic);
         imgBtn_Cam=findViewById(R.id.imgBtn_Cam);
         imgBtn_Avion=findViewById(R.id.imgBtn_Avion);
